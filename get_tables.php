@@ -7,7 +7,11 @@
  */
 require_once "pdo.php";
 
-$stmt = $pdo->query("SELECT * FROM RCOS_APL.Client");
+$client = $_POST['client'];
+$branch = $_POST['branch'];
+$keyword = $_POST['keyword'];
+
+$stmt = $pdo->query("SELECT * FROM RCOS_APL.Client where client_id = ". $client .";");
 echo '<table border="1">'."<br />";
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     echo "<tr><td>";

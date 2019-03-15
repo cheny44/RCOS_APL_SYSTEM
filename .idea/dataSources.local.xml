@@ -8,7 +8,7 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
-      <user-name>kurot</user-name>
+      <user-name>root</user-name>
       <introspection-schemas>*:@,rcos_apl</introspection-schemas>
     </data-source>
   </component>

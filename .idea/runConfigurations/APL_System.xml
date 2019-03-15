@@ -2,8 +2,8 @@
   <configuration default="false" name="APL_System" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" singleton="false" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="myServer" start_url="/APL_System">
     <method v="2">
       <option name="FtpUpload" enabled="true">
-        <server_id>4652cbdf-2a2a-4ec6-9e0e-2e4d402b9120</server_id>
-        <server_name>myServer</server_name>
+        <server_id>85d1b395-d791-491e-9976-60182eabc47b</server_id>
+        <server_name>MyServer</server_name>
         <group_name />
         <path>C:\Users\cheny44\PhpstormProjects\APL_System</path>
       </option>

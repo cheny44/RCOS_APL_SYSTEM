@@ -3,7 +3,7 @@
 ?>
 
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <!-- <meta charset="UTF-8"> -->
 	<title>Searching Engine</title>
@@ -36,17 +36,17 @@
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 	INPUT/SEARCH CHOICE:
 	<input type="radio", name="choice" <?php if (isset($choice) && $choice=="input") echo "checked";?> value="input">INPUT
-	<input type="radio", name="choice" <?php if (isset($choice) && $choice=="search") echo "checked";?> value="search">SEARCH
+	<input type="radio", name="choice" <?php if (isset($choice) && $choice=="search") echo "checked";?> value="search" checked>SEARCH
 	<br><br>
 	<input type="submit" name="submit" value="Submit">
 </form>
 
 <?php 
 	if ($choice == "input") {
-		header('Location: http://localhost/APL/includes/input.inc.php');
+		header('Location: http://localhost/APL_System/includes/input.inc.php');
 	}
 	elseif ($choice == "search") {
-		header('Location: http://localhost/APL/includes/search.inc.php');
+		header('Location: http://localhost/APL_System/includes/search.inc.php');
 	}
 ?>
 

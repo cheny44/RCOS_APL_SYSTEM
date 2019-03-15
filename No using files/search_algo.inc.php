@@ -7,12 +7,12 @@
 
 	if (!empty($client)) {
 		if (empty($branch) && empty($keyword)) {
-			$sql = "SELECT * FROM clients;";
+			$sql = "SELECT * FROM Client where client_id = " . $client . ";";
 			$result = mysqli_query($conn, $sql);
 			$resultCheck = mysqli_num_rows($result);
 			if ($resultCheck > 0) {
 				while ($row = mysqli_fetch_assoc($result)) {
-					echo $row['client_id'];
+					echo $row['client_id'] . "<br>";
 				}
 			}
 		}
