@@ -8,7 +8,7 @@ CREATE TABLE Color (
   color_description varchar(20) NOT NULL
 );
 
-CREATE TABLE Premanent_Ban (
+CREATE TABLE Permanent_Ban (
 	pb_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
 
 	pb_start_date DATE NOT NULL,
@@ -16,6 +16,8 @@ CREATE TABLE Premanent_Ban (
 	pb_end_date varchar(20),
 	pb_description varchar(255) NOT NULL,
 	pb_add_note varchar(255)
+#
+#   incident_id INTEGER
 );
 
 CREATE TABLE Active_Ban (
@@ -73,13 +75,13 @@ CREATE TABLE Incident (
 	incident_description varchar(255),
 	affected_group varchar(255),
 	Notes varchar(255),
-	date_time datetime,
+	date_time DATE,
 	INDEX USING BTREE (date_time),
 
 	client_id INTEGER NOT NULL,
 	branch_id INTEGER NOT NULL,
-	pb_id INTEGER NOT NULL,
-	ab_id INTEGER NOT NULL,
+	pb_id INTEGER,
+	ab_id INTEGER,
 	color_id INTEGER NOT NULL,
 
 	CONSTRAINT FOREIGN KEY (client_id)	REFERENCES Client (client_id)
@@ -96,14 +98,13 @@ CREATE TABLE Incident (
 	PRIMARY KEY(incident_id, client_id)
 ) ENGINE = InnoDB;
 
-select Incident.incident_description, Client.last_name, Branch.branch_name, Color.color_description
-       from Incident join Client join Branch join Color on
-  	Incident.client_id = Client.client_id
-and Incident.branch_id = Branch.branch_id
-and Incident.color_id = Color.color_id
+# select Incident.incident_description, Client.last_name, Branch.branch_name, Color.color_description
+#        from Incident join Client join Branch join Color on
+#   	Incident.client_id = Client.client_id
+# and Incident.branch_id = Branch.branch_id
+# and Incident.color_id = Color.color_id;
 
-INSERT INTO Client (first_name, last_name, age) VALUES ('Yitong', 'Chen', 21);
-INSERT INTO Client (first_name, last_name, age) VALUES ('qwert', 'yuiop', 21);
-INSERT INTO Client (first_name, last_name, age) VALUES ('asdfg', 'hjkl', 21);
-INSERT INTO Client (first_name, last_name, age) VALUES ('zxcvb', 'nm', 21);
-INSERT INTO Client (first_name, last_name, age) VALUES ('12345', '67890', 21);
+
+
+
+

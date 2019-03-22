@@ -22,7 +22,7 @@
     $oldpw = $_POST['pw'] ?? '';
     $oldchoice = $_POST['action'] ?? '';
 if ($oldchoice == "input") {
-    header('Location: http://localhost/APL_System/input.inc.php');
+    header('Location: http://localhost/APL_System/input.php');
 }
 elseif ($oldchoice == "search") {
     header('Location: http://localhost/APL_System/search.php');
