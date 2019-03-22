@@ -1,22 +1,3 @@
-<!--<p>-->
-<?php
-//    phpinfo();
-//echo "hello ";
-//$some = "world!";
-//echo "$some";
-//
-//$l = array();
-//$l['name'] = 'RCOS';
-//$l['project'] = 'APL';
-//
-//echo "<pre>";
-//print_r($l);
-//echo "<pre>";
-//$name = $l['name'] ?? 'not found';
-//echo "Name=$name";
-//?>
-<!--</p>-->
-
 <?php
     $oldname = $_POST['name'] ?? '';
     $oldpw = $_POST['pw'] ?? '';
