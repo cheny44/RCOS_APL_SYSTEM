@@ -1,28 +1,9 @@
-<!--<p>-->
-<?php
-//    phpinfo();
-//echo "hello ";
-//$some = "world!";
-//echo "$some";
-//
-//$l = array();
-//$l['name'] = 'RCOS';
-//$l['project'] = 'APL';
-//
-//echo "<pre>";
-//print_r($l);
-//echo "<pre>";
-//$name = $l['name'] ?? 'not found';
-//echo "Name=$name";
-//?>
-<!--</p>-->
-
 <?php
     $oldname = $_POST['name'] ?? '';
     $oldpw = $_POST['pw'] ?? '';
     $oldchoice = $_POST['action'] ?? '';
 if ($oldchoice == "input") {
-    header('Location: http://localhost/APL_System/input.inc.php');
+    header('Location: http://localhost/APL_System/input.php');
 }
 elseif ($oldchoice == "search") {
     header('Location: http://localhost/APL_System/search.php');

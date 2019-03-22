@@ -9,9 +9,6 @@
     $comment = $_POST['comment'];
 
 
-
-
-
     $sql_client = "INSERT INTO Client(first_name, last_name, age) VALUES ('$first', '$last', '$age')";
     $sql_branch = "INSERT INTO Branch(branch_name, branch_description) VALUES ('$branch', '$comment')";
     $pdo->query($sql_client);
