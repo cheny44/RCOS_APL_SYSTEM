@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1f6249a-011e-48ca-a1e1-0e1491002309" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ac6449b-8c04-4fb2-9a98-d1c839f6144b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ac6449b-8c04-4fb2-9a98-d1c839f6144b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apldatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/apldatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/get_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.php" beforeDir="false" afterPath="$PROJECT_DIR$/input.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdo.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdo.php" afterDir="false" />
-    </list>
+    <list default="true" id="a1f6249a-011e-48ca-a1e1-0e1491002309" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +58,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/input.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="361">
               <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
@@ -154,9 +146,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="837" />
+    <option name="x" value="836" />
     <option name="width" value="1090" />
-    <option name="height" value="1088" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -195,7 +187,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -266,7 +258,7 @@
       <workItem from="1552680007923" duration="3638000" />
       <workItem from="1553025442461" duration="322000" />
       <workItem from="1553025782953" duration="3684000" />
-      <workItem from="1553263562467" duration="3023000" />
+      <workItem from="1553263562467" duration="3325000" />
     </task>
     <servers />
   </component>
@@ -279,7 +271,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41180000" />
+    <option name="totallyTimeSpent" value="41482000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -292,21 +284,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="670" y="0" width="872" height="870" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1724138" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1724138" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36449865" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36449865" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39961013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32841823" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.3294347" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3292683" />
       <window_info anchor="bottom" id="File Transfer" order="10" weight="0.3301759" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.3294347" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32846004" />
@@ -408,7 +399,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
+        <state relative-caret-position="361">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
