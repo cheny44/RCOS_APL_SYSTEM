@@ -28,7 +28,9 @@ CREATE TABLE Active_Ban (
 	INDEX USING BTREE (ab_start_date),
 	ab_end_date Date,
 	ab_description varchar(255),
-	ab_add_note varchar(255)
+	ab_add_note varchar(255),
+
+	client_id INTEGER
 );
 
 CREATE TABLE Branch (
