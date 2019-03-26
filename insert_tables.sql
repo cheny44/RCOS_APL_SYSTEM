@@ -39,33 +39,38 @@ VALUES('1000-01-01','NONE','NONE','NONE');
 INSERT INTO Permanent_Ban(pb_start_date,
                           pb_end_date,
                           pb_description,
-                          pb_add_note)
-VALUES('2000-01-01', 'pb1', 'pb11', 'pb111');
+                          pb_add_note,
+                          client_id)
+VALUES('2000-01-01', 'pb1', 'pb11', 'pb111', 1);
 
 INSERT INTO Permanent_Ban(pb_start_date,
                           pb_end_date,
                           pb_description,
-                          pb_add_note)
-VALUES('2000-02-02', 'pb2', 'pb22', 'pb222');
+                          pb_add_note,
+                          client_id)
+VALUES('2000-02-02', 'pb2', 'pb22', 'pb222', 2);
 
 # Dummy ActiveBan
 INSERT INTO Active_Ban(ab_start_date,
                        ab_end_date,
                        ab_description,
-                       ab_add_note)
-VALUES('1000-01-01','1000-01-01','NONE','NONE');
+                       ab_add_note,
+                       client_id)
+VALUES('1000-01-01','1000-01-01','NONE','NONE',1);
 
 INSERT INTO Active_Ban(ab_start_date,
                        ab_end_date,
                        ab_description,
-                       ab_add_note)
-VALUES('2001-01-01','2001-01-02','ab1','ab11');
+                       ab_add_note,
+                       client_id)
+VALUES('2001-01-01','2001-01-02','ab1','ab11',2);
 
 INSERT INTO Active_Ban(ab_start_date,
                        ab_end_date,
                        ab_description,
-                       ab_add_note)
-VALUES('2001-01-01','2001-01-02','ab2','ab22');
+                       ab_add_note,
+                       client_id)
+VALUES('2001-01-01','2001-01-02','ab2','ab22',3);
 
 # 2 incidents
 INSERT INTO Incident (incident_description,
