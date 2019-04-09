@@ -79,9 +79,10 @@ else if (isset($_POST['Active']) && $_POST['Active'] == 'Yes'){
 else{
     echo "Outputting all Incidents involving Client ID: " . $client ."\r\n";
     $stmt = $pdo->query("SELECT *
-                                   FROM  APL.Client c, APL.incident i
+                                   FROM  APL.Client c, APL.incident i, APL.permanent_ban p, APL.active_ban a
                                    WHERE (c.client_id = ". $client .") AND
-                                         (i.client_id = c.client_id);");
+                                         (i.client_id = c.client_id) AND 
+                                         (i.ab_id = p.pb_id AND i.pb_id = a.ab_id);");
 
     echo '<table border="1">'."<br />";
 
@@ -104,6 +105,10 @@ else{
         echo($row['age']);
         echo("</td><td>");
         echo($row['incident_description']);
+        echo("</td><td>");
+        echo($row['ab_description']);
+        echo("</td><td>");
+        echo($row['pb_description']);
         echo("</td></tr><br/>");
     }
     echo "</table><br/>";
