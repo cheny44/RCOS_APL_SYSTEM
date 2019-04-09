@@ -78,7 +78,7 @@ CREATE TABLE Incident (
 	incident_description varchar(255),
 	affected_group varchar(255),
 	Notes varchar(255),
-	date_time DATE,
+	date_time DATE NOT NULL,
 	INDEX USING BTREE (date_time),
 
 	client_id INTEGER NOT NULL,

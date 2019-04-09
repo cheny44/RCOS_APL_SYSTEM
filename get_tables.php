@@ -20,6 +20,15 @@ if (isset($_POST['Perma']) && $_POST['Perma'] == 'Yes'){
                                          (c.client_id = i.client_id AND i.pb_id = p.pb_id);");
 
     echo '<table border="1">'."<br />";
+    echo "<tr><td>";
+    echo 'first_name';
+    echo "<tr><td>";
+    echo 'last_name';
+    echo "<tr><td>";
+    echo 'age';
+    echo "<tr><td>";
+    echo 'incident_description';
+    echo "<tr><td><br/>";
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr><td>";
         echo($row['first_name']);
@@ -43,6 +52,15 @@ else if (isset($_POST['Active']) && $_POST['Active'] == 'Yes'){
                                          (c.client_id = i.client_id AND i.ab_id = p.ab_id);");
 
     echo '<table border="1">'."<br />";
+    echo "<tr><td>";
+    echo 'first_name';
+    echo "<tr><td>";
+    echo 'last_name';
+    echo "<tr><td>";
+    echo 'age';
+    echo "<tr><td>";
+    echo 'incident_description';
+    echo "<tr><td><br/>";
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr><td>";
         echo($row['first_name']);
@@ -66,6 +84,17 @@ else{
                                          (i.client_id = c.client_id);");
 
     echo '<table border="1">'."<br />";
+
+//    echo "<tr><td>";
+    echo 'first_name';
+    echo "<tr><td>";
+    echo 'last_name';
+    echo "<tr><td>";
+    echo 'age';
+    echo "<tr><td>";
+    echo 'incident_description';
+    echo "<tr><td><br/>";
+
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr><td>";
         echo($row['first_name']);
