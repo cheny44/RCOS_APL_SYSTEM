@@ -25,11 +25,12 @@
     <button type="submit" name="submit" value="submit">Submit</button>
 
 </form>
-
-<?php
-echo "input"
-?>
-
+<form action="csv_parser.php" method="post" enctype="multipart/form-data">
+<!--    <div>-->
+    Import CSV File: <input type="file"  name="filename" id="filename">
+    <button type="submit" id="submit" name="submit">Upload</button>
+<!--    </div>-->
+</form>
 
 </body>
 </html>
