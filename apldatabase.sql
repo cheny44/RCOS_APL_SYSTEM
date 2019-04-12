@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS APL;
 CREATE DATABASE APL
   DEFAULT CHARACTER SET utf8;
 	GRANT ALL ON APL.* TO 'kurot'@'localhost' IDENTIFIED BY '5gengliuli';
@@ -15,9 +16,9 @@ CREATE TABLE Permanent_Ban (
 	INDEX USING BTREE (pb_start_date),
 	pb_end_date varchar(20),
 	pb_description varchar(255) NOT NULL,
-	pb_add_note varchar(255)
-#
-#   incident_id INTEGER
+	pb_add_note varchar(255),
+
+  client_id INTEGER
 );
 
 CREATE TABLE Active_Ban (
@@ -27,7 +28,9 @@ CREATE TABLE Active_Ban (
 	INDEX USING BTREE (ab_start_date),
 	ab_end_date Date,
 	ab_description varchar(255),
-	ab_add_note varchar(255)
+	ab_add_note varchar(255),
+
+	client_id INTEGER
 );
 
 CREATE TABLE Branch (
@@ -75,7 +78,7 @@ CREATE TABLE Incident (
 	incident_description varchar(255),
 	affected_group varchar(255),
 	Notes varchar(255),
-	date_time DATE,
+	date_time DATE NOT NULL,
 	INDEX USING BTREE (date_time),
 
 	client_id INTEGER NOT NULL,

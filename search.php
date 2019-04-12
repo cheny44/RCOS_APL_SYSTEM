@@ -12,7 +12,10 @@
 
 <form action="get_tables.php" method="POST">
     Client: <input type="text" name="client" placeholder="Client ID/Name">
+    Perma: <input type="checkbox" name="Perma" value="Yes" />
+    Active: <input type="checkbox" name="Active" value="Yes" />
     <br>
+
     Branch: <input type="text" name="branch" placeholder="Branch ID/Name">
     <br>
     Keyword: <input type="text" name="keyword" placeholder="Keyword Search">
