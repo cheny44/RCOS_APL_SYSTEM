@@ -7,6 +7,7 @@
 <body>
 
 <form action="input_helper.php" method="POST">
+    Input Single Event
     Name: <input type="text" name="first_name" placeholder="First Name">
     <input type="text" name="last_name" placeholder="Last Name"><br>
     Age: <input type="text" name="age" placeholder=" Age"><br>
@@ -26,8 +27,9 @@
 
 </form>
 <form action="csv_parser.php" method="post" enctype="multipart/form-data">
+    Batch inputting ( Please using CSV file )
 <!--    <div>-->
-    Import CSV File: <input type="file"  name="filename" id="filename">
+    File upload: <input type="file"  name="filename" id="filename">
     <button type="submit" id="submit" name="submit">Upload</button>
 <!--    </div>-->
 </form>
