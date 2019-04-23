@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 require_once "pdo.php";
 /**
@@ -16,6 +17,8 @@ print_r($csv[1]);
 
 //}
 //print_r($csv[1]);
+=======
+>>>>>>> 6d8f87afdb48d0e5f85eac577ae593616764a783
     require_once "pdo.php";
 
     if (isset($_POST['submit']))
@@ -82,4 +85,8 @@ print_r($csv[1]);
         header("Location: success_page.php?insert=success");
 
 
+<<<<<<< HEAD
     }
+=======
+    }
+>>>>>>> 6d8f87afdb48d0e5f85eac577ae593616764a783
