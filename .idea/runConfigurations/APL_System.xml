@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="APL_System" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" singleton="false" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="myServer" start_url="/APL_System">
+  <configuration default="false" name="APL_System" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" singleton="false" browser="e5120d43-2c3f-47ef-9f26-65e539e05186" server_name="myServer" start_url="/APL_System">
     <method v="2">
       <option name="FtpUpload" enabled="true">
         <server_id>85d1b395-d791-491e-9976-60182eabc47b</server_id>
         <server_name>MyServer</server_name>
         <group_name />
-        <path>C:\Users\cheny44\PhpstormProjects\APL_System</path>
+        <path>$PROJECT_DIR$/../APL_SYSTEM</path>
       </option>
     </method>
   </configuration>
