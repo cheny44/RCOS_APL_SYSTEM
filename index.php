@@ -21,8 +21,8 @@ elseif ($oldchoice == "search") {
     <p><label for="inp02">Input password</label>
     <input type="password" name="pw" id="inp02" size="40" value="<?= htmlentities($oldpw) ?>"/></p>
     <p><label for="inp03">What to do:<br /></label>
-    <input type="radio" name="action" value="input" id="inp03">input<br>
-        <input type="radio" name="action" value="search" id="inp03" checked>search<br></p>
+    <input type="radio" name="action" value="input" id="inp03" checked>input<br>
+        <input type="radio" name="action" value="search" id="inp03" >search<br></p>
     <input type="submit"/>
 </form>
 </html>
