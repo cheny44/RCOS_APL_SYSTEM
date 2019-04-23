@@ -33,7 +33,8 @@ if (isset($_POST['Perma']) && $_POST['Perma'] == 'Yes' && !isset($_POST['Active'
     $stmt = $pdo->query("SELECT *
                                    FROM   APL.Client c, APL.incident i, APL.permanent_ban p
                                    WHERE (c.client_id = ". $client .") AND
-                                         (c.client_id = i.client_id AND i.pb_id = p.pb_id);");
+                                         (c.client_id = i.client_id AND 
+                                         (c.client_id= p.client_id));");
     print_first_line();
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr><td>";
@@ -55,9 +56,10 @@ if (isset($_POST['Perma']) && $_POST['Perma'] == 'Yes' && !isset($_POST['Active'
 else if (isset($_POST['Active']) && $_POST['Active'] == 'Yes' && !isset($_POST['Perma'])){
     echo "Outputting all Active Incidents involving client ". $client;
     $stmt = $pdo->query("SELECT *
-                                   FROM   APL.Client c, APL.incident i, APL.active_ban p
+                                   FROM   APL.Client c, APL.Incident i, APL.Active_ban a
                                    WHERE (c.client_id = ". $client .") AND
-                                         (c.client_id = i.client_id AND i.ab_id = p.ab_id);");
+                                         (c.client_id = i.client_id AND 
+                                         (c.client_id= a.client_id));");
     print_first_line();
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr><td>";
@@ -76,13 +78,14 @@ else if (isset($_POST['Active']) && $_POST['Active'] == 'Yes' && !isset($_POST['
     }
     echo "</table><br/>";
 }
-else{
+else if(isset($_POST['Active']) && isset($_POST['Perma'])){
     echo "Outputting all Incidents involving Client ID: " . $client ."\r\n";
     $stmt = $pdo->query("SELECT *
                                    FROM  APL.Client c, APL.incident i, APL.permanent_ban p, APL.active_ban a
                                    WHERE (c.client_id = ". $client .") AND
                                          (i.client_id = c.client_id) AND 
-                                         (i.pb_id = p.pb_id AND i.ab_id = a.ab_id);");
+                                         (p.client_id = c.client_id) AND
+                                         (a.client_id = c.client_id);");
 
     print_first_line();
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
@@ -101,4 +104,30 @@ else{
         echo("</td></tr><br/>");
     }
 //    echo "</table><br/>";
+} else {
+    echo "PLEASE CHECK ONE OF THE BAN TYPE BOXES!!!";
+    echo "<br/>";
+    echo "Outputting all Incidents involving Client ID: " . $client ."\r\n";
+    $stmt = $pdo->query("SELECT *
+                                   FROM  APL.Client c, APL.incident i, APL.permanent_ban p, APL.active_ban a
+                                   WHERE (c.client_id = ". $client .") AND
+                                         (i.client_id = c.client_id);");
+
+    print_first_line();
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        echo "<tr><td>";
+        echo($row['first_name']);
+        echo("</td><td>");
+        echo($row['last_name']);
+        echo("</td><td>");
+        echo($row['age']);
+        echo("</td><td>");
+        echo($row['incident_description']);
+        echo("</td><td>");
+        echo($row['ab_description']);
+        echo("</td><td>");
+        echo($row['pb_description']);
+        echo("</td></tr><br/>");
+    }
+
 }

@@ -6,7 +6,7 @@ USE APL;
 
 CREATE TABLE Color (
   color_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  color_description varchar(20) NOT NULL
+  color_description varchar(20)
 );
 
 CREATE TABLE Permanent_Ban (
@@ -85,7 +85,7 @@ CREATE TABLE Incident (
 	branch_id INTEGER NOT NULL,
 	pb_id INTEGER,
 	ab_id INTEGER,
-	color_id INTEGER NOT NULL,
+	color_id INTEGER,
 
 	CONSTRAINT FOREIGN KEY (client_id)	REFERENCES Client (client_id)
 		ON DELETE CASCADE ON UPDATE CASCADE,

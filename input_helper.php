@@ -8,7 +8,7 @@
     $branch = $_POST['branch'];
     $comment = $_POST['comment'];
 
-    $stmt = $pdo->query("SELECT * FROM RCOS_APL.Client where first_name = '$first' and last_name = '$last' and age = '$age'");
+    $stmt = $pdo->query("SELECT * FROM APL.Client where first_name = '$first' and last_name = '$last' and age = '$age'");
     $found = false;
     while($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {

@@ -92,4 +92,15 @@ INSERT INTO Incident (incident_description,
                       ab_id,
                       branch_id,
                       color_id)
-VALUES('nothing2', 'nobody2', 'none2', '1997-10-24', 2, 2, NULL, 1, 2);
+VALUES('nothing2', 'nobody2', 'none2', '1997-10-24', 2, 2, NULL, 2, 2);
+
+INSERT INTO Incident (incident_description,
+                      affected_group,
+                      Notes,
+                      date_time,
+                      client_id,
+                      pb_id,
+                      ab_id,
+                      branch_id,
+                      color_id)
+VALUES('nothing3', 'nobody3', 'none3', '1997-10-24', 3, NULL, NULL, 3, 3);
