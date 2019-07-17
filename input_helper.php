@@ -30,9 +30,9 @@
         $client_id = $pdo->lastInsertId();
     }
 
-    $stmt = $pdo ->query("SELECT * FROM RCOS_APL.branch where branch_name = '$branch'");
+    $stmt = $pdo ->query("SELECT * FROM APL.branch where branch_name = '$branch'");
     if ($stmt->rowCount() == 0){
-        $sql = "INSERT into RCOS_APL.branch (branch_name) values('" . $branch . "')";
+        $sql = "INSERT into APL.branch (branch_name) values('" . $branch . "')";
         $pdo->query($sql);
         $branch_id = $pdo->lastInsertId();
     }
@@ -46,14 +46,14 @@
     $start_date = date("Y-m-d", strtotime($start_date));
     if ($ban_type == "Permanent"){
         $ban = 0;
-        $sql = "INSERT into RCOS_APL.Permanent_Ban (pb_start_date, pb_description, client_id) 
+        $sql = "INSERT into APL.Permanent_Ban (pb_start_date, pb_description, client_id) 
                                 values ('" . $start_date . "', '" . $comment . "', '" . $client_id . "')";
         $pdo->query($sql);
     }
     elseif ($ban_type == "Active"){
         $ban = 1;
         $end_date = date("Y-m-d", strtotime($start_date));
-        $sql = "INSERT into RCOS_APL.Active_Ban (ab_start_date, ab_end_date, ab_description, client_id) 
+        $sql = "INSERT into APL.Active_Ban (ab_start_date, ab_end_date, ab_description, client_id) 
                                 values ('" . $start_date . "', '" . $end_date . "', '" . $comment . "', '" . $client_id . "')";
         $pdo->query($sql);
     }
@@ -63,16 +63,16 @@
     $des = str_replace('\'', '\\\'', $description);
     if ($ban == 0 ){
         $pb_id = $pdo->lastInsertId();
-        $sql = "INSERT into RCOS_APL.incident(date_time, incident_description, client_id, branch_id, pb_id) 
+        $sql = "INSERT into APL.incident(date_time, incident_description, client_id, branch_id, pb_id) 
                                 values ('" . $date . "', '" . $des . "', '" . $client_id . "', '" . $branch_id . "', '" . $pb_id. "')";
     }
     elseif ($ban == 1){
         $ab_id = $pdo->lastInsertId();
-        $sql = "INSERT into RCOS_APL.incident(date_time, incident_description, client_id, branch_id, ab_id) 
+        $sql = "INSERT into APL.incident(date_time, incident_description, client_id, branch_id, ab_id) 
                                 values ('" . $date . "', '" . $des . "', '" . $client_id . "', '" . $branch_id . "', '" . $ab_id. "')";
     }
     else{
-        $sql = "INSERT into RCOS_APL.incident(date_time, incident_description, client_id, branch_id) 
+        $sql = "INSERT into APL.incident(date_time, incident_description, client_id, branch_id) 
                                 values ('" . $date . "', '" . $des . "', '" . $client_id . "', '" . $branch_id . "')";
     }
     $pdo->query($sql);
